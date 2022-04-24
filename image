@@ -1,0 +1,21 @@
+//image blurr
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+%matplotlib inline
+
+from PIL import Image
+
+img = Image.open('/content/sample_data/teknik.jpg')
+img.thumbnail((64, 64), Image.ANTIALIAS)
+imgplot = plt.imshow(img)
+
+//image no blurr
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+%matplotlib inline
+
+from PIL import Image
+
+img = mpimg.imread('/content/sample_data/teknik.jpg')
+
+imgplot = plt.imshow(img)
